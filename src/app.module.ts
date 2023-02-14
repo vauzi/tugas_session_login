@@ -5,6 +5,7 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { RegisterController } from './register/register.controller';
 import entities from './typorm';
 
 @Module({
@@ -27,7 +28,7 @@ import entities from './typorm';
     AuthModule,
     UsersModule,
   ],
-  controllers: [AppController],
+  controllers: [AppController, RegisterController],
   providers: [AppService],
 })
 export class AppModule {}
